@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="af"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09090b"><title>Besigheidstudies Gr 11 – STAY Oefentoets</title><style>*{box-sizing:border-box}html,body{margin:0;background:#09090b;color:#f2f2f4;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-text-size-adjust:100%}
+body{background:radial-gradient(circle at 15% 0%,#2a0a10 0,transparent 45%),radial-gradient(circle at 100% 30%,#1a1a22 0,transparent 40%),#09090b;min-height:100vh}
+#cf{position:fixed;inset:0;pointer-events:none;z-index:9}
+#app{max-width:640px;margin:0 auto;padding:18px 14px 48px}
+.hero{text-align:center;padding:10px 0 16px}.k1{font-size:11px;letter-spacing:5px;color:#c9ccd4}.hero h1{margin:6px 0 2px;font-size:28px;font-weight:900;letter-spacing:-.5px;animation:gloei 3s infinite}.hero h1 span{color:#e5162b}.k3{font-size:13px;color:#8a8d96}
+.card{background:rgba(23,23,28,.92);border:1px solid #2c2c35;border-radius:18px;padding:14px;margin-bottom:14px}
+.sil{color:#c9ccd4}.dof{color:#8a8d96}.grn{color:#2fd67b;margin-top:4px}.xs{font-size:12px}.c{text-align:center}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}.row.c{justify-content:center}
+.bar{height:8px;background:#1f1f26;border-radius:99px;margin:10px 0 4px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#e5162b,#ff5a6a);border-radius:99px;transition:width .5s}
+.sec{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#c9ccd4;margin:22px 4px 10px}
+.path{display:flex;flex-direction:column;align-items:stretch}.ln2{width:2px;height:14px;background:linear-gradient(#e5162b,#2c2c35);margin:0 auto}
+.lv{display:flex;align-items:center;gap:12px;text-align:left;background:#15151a;border:1.5px solid #2c2c35;border-radius:16px;padding:12px 14px;color:#f2f2f4;font-family:inherit;cursor:pointer;width:100%}
+.lv .ic{font-size:24px;width:44px;height:44px;border-radius:12px;background:#1f1f26;display:grid;place-items:center;flex:none}
+.lv .lt{flex:1;display:flex;flex-direction:column}.ln{font-weight:800;font-size:15px}.ls{font-size:12px;color:#8a8d96}.st{color:#e5162b;letter-spacing:2px;font-size:16px}
+.lv.done{border-color:#5a1a22}.lv.done .ic{background:#3a0f15}.lv.cur{border-color:#e5162b;box-shadow:0 0 0 3px rgba(229,22,43,.18),0 0 22px rgba(229,22,43,.25);animation:puls 2s infinite}.lv.lk{opacity:.45}
+.masc{display:flex;gap:10px;align-items:flex-start}.av{font-size:26px;width:44px;height:44px;border-radius:50%;background:#1f1f26;border:1.5px solid #c9ccd4;display:grid;place-items:center;flex:none}
+.masc.happy .av{border-color:#2fd67b;animation:pop .5s}.masc.sad .av{border-color:#e5162b;animation:skud .4s}
+.bub{background:#1f1f26;border-radius:14px;padding:10px 12px;font-size:14px;line-height:1.4;color:#e6e6ea}
+.big{width:100%;background:#e5162b;color:#fff;border:0;border-radius:999px;padding:14px;font-size:16px;font-weight:800;font-family:inherit;margin-top:10px;cursor:pointer;min-height:50px}.big:disabled{opacity:.4}
+.sec2{background:transparent;color:#e6e6ea;border:1.5px solid #c9ccd4;border-radius:999px;padding:12px 18px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;min-height:46px}.sec2.full{width:100%;margin-top:10px}
+.sel{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.sel select{flex:1 1 200px;min-height:46px;background:#15151a;color:#f2f2f4;border:1.5px solid #2c2c35;border-radius:14px;padding:0 12px;font-size:15px;font-family:inherit}
+.lnk{background:none;border:0;color:#8a8d96;text-decoration:underline;font-family:inherit;margin-top:14px;cursor:pointer}
+.top{display:flex;align-items:center;gap:10px;font-size:14px;color:#c9ccd4}.top .tt{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x{background:#1f1f26;color:#f2f2f4;border:0;border-radius:50%;width:36px;height:36px;font-size:15px;cursor:pointer;flex:none}
+.tag{display:inline-block;margin:12px 0 6px;font-size:12px;color:#c9ccd4;background:#1f1f26;border-radius:99px;padding:4px 10px}
+.q{font-size:19px;font-weight:800;line-height:1.35;margin:6px 0 14px}
+.op{display:flex;gap:10px;width:100%;text-align:left;background:#15151a;border:1.5px solid #2c2c35;color:#f2f2f4;border-radius:14px;padding:14px;font-size:16px;line-height:1.35;margin-bottom:10px;font-family:inherit;cursor:pointer;min-height:52px}
+.op b{color:#c9ccd4}.op.ok{background:#0f2e1f;border-color:#2fd67b;animation:pop .4s}.op.bad{background:#3a0f15;border-color:#e5162b;animation:skud .4s}.op:disabled{cursor:default}
+.fb{font-size:16px;line-height:1.4;min-height:6px}.ex{margin-top:8px;color:#c9ccd4;font-size:15px}.fl{color:#ff8a3d}
+.card{position:relative;overflow:hidden}.burst{position:absolute;inset:0;pointer-events:none}.burst span{position:absolute;bottom:40%;font-size:20px;animation:val 1.2s ease-out forwards;opacity:0}
+.tick{animation:pop .4s;display:inline-block}
+.res .pc{font-size:52px;margin:10px 0 0;color:#fff}.big3{font-size:44px;color:#e5162b;letter-spacing:6px;margin:8px 0}.big3 span{display:inline-block;opacity:0;animation:pop .5s forwards}
+.bds{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:10px}.bd{background:#3a0f15;border:1px solid #e5162b;border-radius:99px;padding:5px 10px;font-size:13px}
+.fout{border-top:1px solid #2c2c35;padding:10px 0;font-size:14px}
+#app.in{animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}60%{transform:scale(1.12);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes skud{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+@keyframes puls{50%{box-shadow:0 0 0 5px rgba(229,22,43,.1),0 0 28px rgba(229,22,43,.35)}}
+@keyframes val{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-110px) rotate(25deg);opacity:0}}
+@keyframes gloei{0%,100%{text-shadow:0 0 6px rgba(229,22,43,.6)}50%{text-shadow:0 0 18px rgba(229,22,43,.9)}}</style></head><body><canvas id="cf"></canvas><div id="app"></div><script>
+const TOPICS = [
+  { naam: "Besigheidsomgewings", em: "🌐", sub: "H1 · Eenheid 1.1–1.3" },
+  { naam: "Mikro- & markuitdagings", em: "⚡", sub: "H2 · Eenheid 2.1–2.2" },
+  { naam: "Makro-omgewing", em: "🏛️", sub: "H2 · Eenheid 2.3" },
+  { naam: "Aanpassing & invloed", em: "🤝", sub: "H3 · Eenheid 3.1–3.3" },
+  { naam: "Sosio-ekonomiese kwessies", em: "📉", sub: "H4 · Eenheid 4.1" },
+  { naam: "Rowery & nywerheidsverhoudinge", em: "⚖️", sub: "H4 · Eenheid 4.2–4.3" },
+  { naam: "Bemarking", em: "🛍️", sub: "H10 · Produk, prys, plek, promosie" },
+  { naam: "Produksiestelsels", em: "🏭", sub: "H11 · Massa, lot, stuk" },
+  { naam: "Menslike hulpbronne", em: "👥", sub: "H18 · Werwing tot wetgewing" },
+];
+
+// Die korrekte antwoord is altyd o[0]; opsies word geskommel wanneer dit gewys word.
+const QS = [
+  { t: 0, q: "Watter omgewing is die interne besigheidsomgewing (alles binne die besigheid)?", o: ["Mikro-omgewing", "Markomgewing", "Makro-omgewing", "Globale omgewing"], why: "Die mikro-omgewing is die interne omgewing. Die besigheid het VOLLE beheer daaroor." },
+  { t: 0, q: "Oor watter omgewing het die besigheid GEEN beheer nie?", o: ["Makro-omgewing", "Mikro-omgewing", "Markomgewing", "Organisasiekultuur"], why: "Die makro-omgewing is die breë eksterne omgewing. Die besigheid moet daarby aanpas." },
+  { t: 0, q: "Watter stelling beskryf die markomgewing?", o: ["Die direkte eksterne omgewing waaroor die besigheid beperkte beheer het", "Die interne omgewing waaroor die besigheid volle beheer het", "Die breë eksterne omgewing sonder enige beheer", "Slegs die besigheid se werknemers"], why: "Markomgewing = direkte eksterne omgewing, beperkte/min beheer." },
+  { t: 0, q: "Watter een is 'n komponent van die MARKomgewing?", o: ["Verskaffers", "Organisasiekultuur", "Politieke faktore", "Bestuur en leierskap"], why: "Markomgewing: verbruikers/kliënte, verskaffers, tussengangers, mededingers en ander organisasies (GBO's, NRO's, reguleerders, vakbonde)." },
+  { t: 0, q: "Watter een is NIE 'n komponent van die makro-omgewing nie?", o: ["Tussengangers", "Wetlike", "Tegnologiese", "Fisiese"], why: "Tussengangers is deel van die markomgewing. Makro: sosiaal, polities, wetlik, ekonomies, tegnologies, fisies, globaal." },
+  { t: 0, q: "Watter een is 'n komponent van die mikro-omgewing?", o: ["Visie, missiestelling, doelwitte en mikpunte", "Mededingers", "Wisselkoerse", "Reguleerders"], why: "Mikro: visie/missie, organisasiestruktuur, hulpbronne, organisasiekultuur, bestuur en leierskap, agt besigheidsfunksies." },
+  { t: 0, q: "Hoe kan 'n besigheid sy VERSKAFFERS beïnvloed?", o: ["Deur langtermynkontrakte teen vaste pryse te onderteken", "Deur belasting te verhoog", "Deur die rentekoers te verander", "Deur sy missiestelling te hersien"], why: "Langtermynkontrakte vir insette teen vaste pryse, strategiese alliansies, of grootmaat aankope vir afslag." },
+  { t: 0, q: "Hoe kan besighede tog 'n mate van invloed op die makro-omgewing hê?", o: ["Invloedwerwing, verskansing teen inflasie en netwerkvorming", "Deur die inflasiekoers self te bepaal", "Deur nuwe wette te maak", "Deur die weer te beheer"], why: "Hulle kan saam invloedwerwing doen, verskans teen inflasie (goud, olie, eiendom) en netwerk oor tegnologiese uitdagings." },
+  { t: 0, q: "Wat is 'n voordeel as 'n besigheid betrokke is in die makro-omgewing?", o: ["Hulle kan regeringstenders en kontrakte bekom", "Hulle betaal meer belasting", "Hulle hoef nie te bemark nie", "Mededingers verdwyn"], why: "Ook: goeie publisiteit, lojale klante, vaardige werknemers, belastingafslag, beleggers trek." },
+  { t: 0, q: "Hoe kan besighede betrokke raak in die makro-omgewing?", o: ["Werksgeleenthede skep en sosiale verantwoordelikheidsprogramme onderneem", "Pryse so hoog moontlik maak", "Werkers aflê", "Wetgewing ignoreer"], why: "Ook: uitvoermarkte in Afrika ontgin, navorsing, kollektiewe bedinging, Privaat-Publieke vennootskappe, opleiding." },
+
+  { t: 1, q: "Werknemers wat nie die visie, missie en doelwitte ondersteun nie en altyd kla, is...", o: ["Moeilike werknemers", "Onopgeleide werknemers", "Vakbondlede", "Bestuurders"], why: "Moeilike werknemers se aksies kan konflik in die span veroorsaak." },
+  { t: 1, q: "Wat is 'n gevolg van 'n gebrek aan visie en missie?", o: ["Konflik, negatiwiteit en swak produktiwiteit", "Hoër winste", "Beter spanwerk", "Laer koste"], why: "Bestuur en werknemers het verskillende idees oor die doelwitte, wat konflik veroorsaak." },
+  { t: 1, q: "Wat is 'n sloerstaking?", o: ["Werkers kom werk toe maar werk doelbewus teen 'n stadiger tempo", "Werkers weier om te werk totdat eise nagekom is", "Die werkgewer sluit werkers uit", "Werkers bedank almal saam"], why: "By 'n staking weier werkers om te werk; by 'n sloerstaking werk hulle doelbewus stadiger." },
+  { t: 1, q: "Mededinging verwys na...", o: ["Besighede wat dieselfde of soortgelyke produkte of dienste lewer", "Die besigheid se eie werknemers", "Die regering se wette", "Verskaffers van grondstowwe"], why: "As 'n besigheid nie die mededingers se gehalte of pryse kan ewenaar nie, verloor dit kliënte." },
+  { t: 1, q: "Wat gebeur as verskaffers se grondstowwe onderbreek word?", o: ["Produksie en winsgewendheid neem af", "Produksie styg", "Pryse daal outomaties", "Daar is geen impak nie"], why: "Sonder grondstowwe kan die besigheid nie goedere produseer nie; kliënte gaan verlore en wins daal." },
+  { t: 1, q: "Demografie verwys na...", o: ["Statistiek van die bevolking soos geslag, ouderdom, ras, opvoeding en inkomste", "Verbruikers se leefstyl en belangstellings", "Die besigheid se struktuur", "Die regering se beleid"], why: "Leefstyl, voorkeure en belangstellings = psigografie." },
+  { t: 1, q: "Wat kan veranderinge in verbruikersvoorkeure veroorsaak?", o: ["Veroudering van voorraad en daling in winsmarges", "Meer werkers", "Laer belasting", "Beter verskaffers"], why: "Besighede moet voortdurend navorsing doen oor wat verbruikers nodig het." },
+  { t: 1, q: "Wat sluit sosio-kulturele faktore in?", o: ["Taal, gebruike, inkomstevlakke en voorkeure van 'n kultuur", "Rentekoerse en wisselkoerse", "Nuwe masjinerie", "Klimaatsverandering"], why: "Besighede moet seker maak hul bemarking is nie aanstoot gewend vir kulturele groepe nie." },
+  { t: 1, q: "Watter een is 'n manier om mededinging te hanteer?", o: ["Lojaliteitskemas en lae-koste ekstras aanbied", "Pryse verhoog sonder rede", "Klantediens verminder", "Minder adverteer"], why: "Ook: unieke produkte, persoonlike dienste, goedkoper pryse, hoë gehalte, goeie opgeleide werknemers." },
+  { t: 1, q: "Wat is 'n gevolg van 'n gebrek aan bestuursvaardighede?", o: ["Hulpbronne word vermors en doelwitte word nie bereik nie", "Werknemers word meer gemotiveer", "Wins styg", "Daar is geen konflik"], why: "Swak bestuur lei tot 'n ongelukkige en gefrustreerde werkerskorps." },
+
+  { t: 2, q: "Hoe word netto inkomste bepaal?", o: ["Bruto inkomste minus alle uitgawes", "Bruto inkomste plus bonusse", "Slegs die salaris voor belasting", "Uitgawes minus inkomste"], why: "As netto inkomste afneem, koop verbruikers net noodsaaklike goedere." },
+  { t: 2, q: "Wat kan 'n verandering in regering veroorsaak?", o: ["Politieke onstabiliteit wat beleggers en toeriste afskrik", "Altyd laer pryse", "Meer grondstowwe", "Geen impak op besighede"], why: "Besighede moet aanpas by nuwe wette en regeringsbeleid." },
+  { t: 2, q: "Watter wet vereis voorkeur aan voorheen benadeelde individue by aanstellings?", o: ["Wet op Gelyke Indiensneming (WGI) No. 55 van 1998", "Nasionale Kredietwet No. 34 van 2005", "Wet op Verbruikersbeskerming No. 68 van 2008", "COIDA No. 61 van 1997"], why: "Dit is moeilik, want kandidate het nie altyd die nodige kwalifikasies en ervaring nie." },
+  { t: 2, q: "Wat is waar van mikrolenings?", o: ["Hoër rentekoerse en korter terugbetalingsperiodes", "Laer rentekoerse as banke", "Hulle word deur die Bankwet gereguleer", "Net groot maatskappye kan dit kry"], why: "Daar is min beskerming, want mikrolenings word nie deur die Bankwet (No. 94 van 1990) gereguleer nie." },
+  { t: 2, q: "Globalisering verwys na...", o: ["Die uitruil van produkte, dienste, kapitaal en arbeid oor nasionale grense", "Slegs plaaslike handel", "Die regering se begroting", "Werkers se stakings"], why: "Voordeel: vinniger oordrag van kennis en vaardighede. Nadeel: storting, migrasie van geskoolde arbeid." },
+  { t: 2, q: "Wat doen arbeidsbeperkinge (wetgewing)?", o: ["Skep 'n wetlike raamwerk wat werknemers teen uitbuiting beskerm", "Laat werkgewers toe om enigiets te doen", "Verhoog alle salarisse", "Verbied vakbonde"], why: "Sommige werkgewers sien dit as beperkend; ander as beskerming van werkers se regte." },
+  { t: 2, q: "Watter wet beskerm besighede en verbruikers teen roekelose kredietverlening?", o: ["Nasionale Kredietwet (NKW) No. 34 van 2005", "WAV No. 66 van 1995", "WBDV No. 75 van 1997", "WVO No. 68 van 2008"], why: "NKW: teen nalatige en roekelose kredietverleningspraktyke." },
+  { t: 2, q: "Wat vereis die Wet op Vaardigheidsontwikkeling (WVO)?", o: ["Werkgewers moet bydra tot opleiding van hul werknemers", "Minimum werksure", "Vergoeding vir beserings", "Gelyke indiensneming"], why: "WVO No. 68 van 2008." },
+  { t: 2, q: "Sosiale waardes verwys na...", o: ["Oortuigings, norme en waardes wat 'n groep in die samelewing deel", "Die bevolking se ouderdom", "Pryse van goedere", "Die besigheid se wins"], why: "Dit beïnvloed koopvoorkeure; besighede het nie beheer oor verbruikers se sosiale waardes nie." },
+  { t: 2, q: "Watter wet stel minimum standaarde vir indiensneming?", o: ["Wet op Basiese Diensvoorwaardes (WBDV)", "Nasionale Kredietwet", "Wet op Verbruikersbeskerming", "Wet op Gelyke Indiensneming"], why: "WBDV No. 75 van 1997 omskryf die voorwaardes van indiensneming." },
+
+  { t: 3, q: "Wat is 'n samesmelting?", o: ["Twee maatskappye vorm met ooreenkoms 'n nuwe besigheid", "Een besigheid koop meerderheid aandele teen die ander se wense", "Besighede werk saam maar bly afsonderlik", "'n Besigheid sluit"], why: "Hulle deel hulpbronne, wat tot groei en volhoubaarheid lei." },
+  { t: 3, q: "Wanneer vind 'n oorname plaas?", o: ["Een besigheid neem beheer oor deur die meerderheid aandele te bekom", "Twee besighede stem in om saam te smelt", "'n Besigheid word 'n filiaal sonder aankoop", "Besighede vorm 'n vennootskap"], why: "Soms gebeur dit teen die wense van die besigheid." },
+  { t: 3, q: "Wat is 'n alliansie?", o: ["'n Ooreenkoms waar besighede saamwerk maar afsonderlike entiteite bly", "'n Nuwe besigheid uit twee", "Een besigheid koop 'n ander", "'n Staking"], why: "Alliansies maak dit moontlik om meer mededingend te wees." },
+  { t: 3, q: "MTN wat Afrihost se aandele koop, is 'n voorbeeld van 'n...", o: ["Verkryging", "Alliansie", "Sloerstaking", "Netwerk"], why: "Verkryging: 'n besigheid koop 'n ander besigheid teen 'n ooreengekome prys." },
+  { t: 3, q: "Strategiese reaksie verwys na...", o: ["Hoe besighede op uitdagings reageer deur planne in plek te stel", "Om niks te doen nie", "Net om pryse te verlaag", "Om werkers af te dank"], why: "Bestuur ontleed inligting en identifiseer belanghebbendes." },
+  { t: 3, q: "Invloedwerwing is...", o: ["'n Georganiseerde proses om regeringsbeleid te beïnvloed of te verander", "Om nuwe werkers te werf", "Om voorraad te koop", "'n Tipe advertensie"], why: "Bv. om wette soos kinderarbeidswette of wette oor skoon lug en water te verander." },
+  { t: 3, q: "Hoe kan 'n besigheid teen inflasie verskans?", o: ["Surplusfondse belê in goud, olie of eiendom", "Al sy kontant in die kluis hou", "Pryse verlaag", "Meer krediet gee"], why: "Bates met intrinsieke waarde beskerm kapitaal teen inflasie." },
+  { t: 3, q: "Bestuurders wat saam gholf speel om besighede te netwerk, is 'n voorbeeld van...", o: ["Informele netwerkvorming", "Formele netwerkvorming", "'n Oorname", "Invloedwerwing"], why: "Formele netwerkvorming = georganiseerde sakekamers." },
+  { t: 3, q: "Die drievoudige sleutelaspekte fokus op...", o: ["Mense, die planeet en wins", "Prys, plek en produk", "Werwing, seleksie en induksie", "Massa, lot en stuk"], why: "'n Raamwerk vir sosiale en omgewingsverantwoordelikheid." },
+  { t: 3, q: "Wat is 'n voordeel van sosiale verantwoordelikheidsprojekte (KMI)?", o: ["Werknemers se moraal en werksbevrediging verhoog", "Belasting styg", "Klante word minder lojaal", "Die besigheid se beeld verswak"], why: "Ook: bemarkingstrategie, trek beleggers, klantelojaliteit, positiewe beeld." },
+  { t: 3, q: "Hoe kan besighede magsverhoudinge vorm?", o: ["Strategiese alliansies/vennootskappe en oorreding van groot beleggers", "Deur hul personeel te verminder", "Deur geen kontak met ander te hê", "Deur pryse te verhoog"], why: "Magsverhouding = 'n maatreël van die besigheid om sy omgewing en die gedrag van ander te beheer." },
+
+  { t: 4, q: "Inflasie verwys na...", o: ["Die algemene styging van pryse en daling in die koopkrag van geld", "'n Daling in pryse", "Bevolkingsgroei", "Laer belasting"], why: "Stygende inflasie verminder verbruikers se besteebare inkomste." },
+  { t: 4, q: "Wat is 'n impak van inflasie op besighede?", o: ["Afname in verkope omdat verbruikers minder bestee", "Meer verkope", "Goedkoper grondstowwe", "Hoër winste"], why: "Grondstowwe kos meer, verkope daal en werknemers moet dalk afgelê word." },
+  { t: 4, q: "Ekonomiese misdaad staan ook bekend as...", o: ["Witboordjiemisdaad", "Storting", "Rowery", "Sloerstaking"], why: "Voorbeelde: diefstal van identiteit, kredietkaartbedrog en geldwassery." },
+  { t: 4, q: "Omkopery en 'kickbacks' is voorbeelde van...", o: ["Korrupsie", "Seksuele teistering", "Storting", "Inflasie"], why: "Korrupsie = misbruik van mag of posisie vir geldelike gewin." },
+  { t: 4, q: "Wat is storting (dumping)?", o: ["'n Land voer produkte uit teen pryse laer as die plaaslike mark se pryse", "Om afval te stort", "Om pryse te verhoog", "Om werknemers af te lê"], why: "Plaaslike besighede verloor wins omdat hulle nie kan kompeteer nie." },
+  { t: 4, q: "Bevolkingsgroei word bepaal deur...", o: ["Geboortes, sterftes en verskuiwing na ander lande", "Rentekoerse", "Belasting", "Wisselkoerse"], why: "'n Groot toename plaas druk op natuurlike hulpbronne en die ekonomie." },
+  { t: 4, q: "Uitputting van natuurlike hulpbronne kom meestal voor by...", o: ["Boerdery, mynbou en die fossielbrandstof bedryf", "Banke en versekering", "Kleinhandelwinkels", "Onderwys"], why: "Dit verwys na die oor-aanwending van natuurlike hulpbronne." },
+  { t: 4, q: "Wat is 'n impak van ongeletterdheid op besighede?", o: ["Moeilik om kontrakte met ongeletterde mense te sluit", "Hoër produktiwiteit", "Laer opleidingskoste", "Meer kliënte"], why: "Ongeletterdheid = mense wat nie kan lees of skryf nie." },
+  { t: 4, q: "Wat is 'n impak van lae inkomstevlakke op besighede?", o: ["Verbruikers koop goedkoper goedere, wat tot laer winste lei", "Meer luukse aankope", "Hoër winste", "Geen impak nie"], why: "Suid-Afrika het een van die mees skeefgetrekte inkomsteprofiele in die wêreld." },
+  { t: 4, q: "Wat is etiese wangedrag?", o: ["Gedrag van werknemers wat nie ooreenstem met die waardes van die besigheid nie", "Om hard te werk", "Om belasting te betaal", "Om opleiding te gee"], why: "Tipes: seksuele teistering, korrupsie en wanbestuur van fondse." },
+
+  { t: 5, q: "Rowery is...", o: ["Die onwettige kopiëring of nabootsing van 'n ander persoon se werk", "Om 'n patent te registreer", "Om 'n vakbond te stig", "Om pryse te verlaag"], why: "Dit lei tot finansiële verliese vir besighede en kunstenaars." },
+  { t: 5, q: "Wat is kopiereg?", o: ["Die eksklusiewe reg van die outeur/kunstenaar om werk te druk, publiseer, op te voer of op te neem", "Die reg op 'n uitvinding vir 20 jaar", "'n Teken wat 'n produk uitken", "'n Vakbondooreenkoms"], why: "Kopiereghouers kan regstappe neem teen enigeen wat hul werk kopieer." },
+  { t: 5, q: "Vir hoe lank word 'n patent deur die owerheid toegestaan?", o: ["'n Beperkte tydperk van tot twintig jaar", "Vir altyd", "Vyf jaar", "Een jaar"], why: "'n Patent gee die ontwerper die reg om ander te verhoed om die ontwerp te gebruik." },
+  { t: 5, q: "Hoe gereeld moet 'n geregistreerde handelsmerk hernu word?", o: ["Elke tien jaar", "Elke jaar", "Elke twintig jaar", "Nooit"], why: "Dan is dit ewigdurend, op voorwaarde dat die hernuwingsfooi betaal word." },
+  { t: 5, q: "Maxi's Skoene gebruik 'n spesifieke simbool sodat klante hul stewels maklik uitken. Watter oplossing is dit?", o: ["Handelsmerk", "Patent", "Kopiereg", "Uitsluiting"], why: "'n Handelsmerk is 'n teken, karakter of woord om 'n produk uit te ken." },
+  { t: 5, q: "Die eienaar van Maxi's Skoene het die eksklusiewe reg op die bloudruk van die ontwerp. Dit is 'n...", o: ["Patent", "Handelsmerk", "Kopiereg", "Vakbond"], why: "'n Patent beskerm die ontwerp/uitvinding van 'n produk." },
+  { t: 5, q: "Nywerheidsverhoudinge verwys na die verhouding tussen...", o: ["Werkgewer (bestuur) en werknemers", "Verskaffers en kliënte", "Twee mededingers", "Die regering en ander lande"], why: "Dit word gelei deur die Wet op Arbeidsverhoudinge (No. 66 van 1995)." },
+  { t: 5, q: "Wat is 'n uitsluiting?", o: ["Die werkgewer verhoed stakende werknemers om die perseel binne te kom", "Werkers werk stadiger", "Werkers bedank", "'n Nuwe werker word uitgesluit van induksie"], why: "Werknemers moet 48 uur vooraf skriftelik in kennis gestel word." },
+  { t: 5, q: "Wat is 'n vakbond?", o: ["'n Vereniging deur werkers gevorm om hul regte in die werkplek te beskerm", "'n Regeringsdepartement", "'n Bank", "'n Groep bestuurders"], why: "Lede betaal vakbondfooie; verteenwoordigers word deur lede verkies." },
+  { t: 5, q: "Watter liggaam word deur die WAV gestig om dispute op te los?", o: ["Kommissie vir Versoening, Bemiddeling en Arbitrasie (KVBA)", "Die Reserwebank", "SARS", "Die JSE"], why: "Die WAV maak ook voorsiening vir die Arbeidshof en Arbeidsappèlhof." },
+  { t: 5, q: "Watter een is 'n funksie van vakbonde?", o: ["Onderhandel vir beter werksomstandighede, salarisse en lone", "Bepaal produkpryse", "Stel bestuurders aan", "Betaal belasting namens die besigheid"], why: "Hulle verteenwoordig ook werkers oor griewe en kan regstappe namens lede neem." },
+
+  { t: 6, q: "Watter beleid is die eerste/hoofkomponent van die bemarkingsresep?", o: ["Produkbeleid", "Prysbeleid", "Distribusiebeleid", "Kommunikasiebeleid"], why: "Sonder 'n produk is daar nie 'n besigheid nie." },
+  { t: 6, q: "Motoronderdele, toerusting en masjinerie is voorbeelde van...", o: ["Industriële goedere", "Geriefsgoedere", "Spesialiteitsgoedere", "Ongevraagde goedere"], why: "Industriële goedere word gebruik om ander goedere te produseer." },
+  { t: 6, q: "Brood, melk en gaskoeldrank is...", o: ["Geriefsgoedere", "Uitsoekgoedere", "Spesialiteitsgoedere", "Ongevraagde goedere"], why: "Lae pryse; verbruikers koop sonder om baie daaroor te dink." },
+  { t: 6, q: "Televisies, motorvoertuie en klere is...", o: ["Uitsoekgoedere", "Geriefsgoedere", "Ongevraagde goedere", "Industriële goedere"], why: "Verbruikers vergelyk by verskillende winkels vir die beste waarde." },
+  { t: 6, q: "Begrafnisdienste en brandblussers is...", o: ["Ongevraagde (onbeplande) goedere", "Spesialiteitsgoedere", "Geriefsgoedere", "Uitsoekgoedere"], why: "Verbruikers dink nie gewoonlik aan dit totdat hulle dit nodig het nie." },
+  { t: 6, q: "Juweliersware en handelsnaam klere is...", o: ["Spesialiteitsgoedere", "Geriefsgoedere", "Ongevraagde goedere", "Dienste"], why: "Verbruikers weet presies wat hulle wil hê en soek totdat hulle dit kry." },
+  { t: 6, q: "'n Muffin kos R15 om te maak. Die besigheid voeg 50% by. Wat is die verkoopprys (opslagpryse)?", o: ["R22,50", "R20,00", "R30,00", "R16,50"], why: "R15 + (50% × R15 = R7,50) = R22,50." },
+  { t: 6, q: "Avokadopere teen R6,99 in plaas van R7,00 is 'n voorbeeld van...", o: ["Sielkundige pryse", "Markpenetrasiepryse", "Kompetisie gebaseerde pryse", "Koste-gebaseerde pryse"], why: "Verbruikers lees dit as 'n bietjie minder en dink dis goedkoper." },
+  { t: 6, q: "Lae pryse om 'n NUWE produk bekend te stel, wat later verhoog word, is...", o: ["Markpenetrasiepryse", "Sielkundige pryse", "Opslagpryse", "Kliënt-gebaseerde pryse"], why: "Dit is nie 'n winsgewende strategie op die langtermyn nie." },
+  { t: 6, q: "'Koop een, kry een gratis' is 'n voorbeeld van...", o: ["Promosieprysbepaling", "Kompetisie gebaseerde pryse", "Koste-gebaseerde pryse", "Markpenetrasiepryse"], why: "Pryse word tydelik verlaag vir 'n kort tydperk." },
+  { t: 6, q: "Wat is waar van 'n DIREKTE distribusiekanaal?", o: ["Vervaardiger verkoop direk aan verbruiker sonder tussengangers", "Goedere gaan deur agente en groothandelaars", "Die kleinhandelaar dra al die risiko", "Dit lei tot hoër eindpryse"], why: "Vervaardigers dra al die risiko's en verbruikers kry beter pryse." },
+  { t: 6, q: "Watter is die VIER komponente van die bemarkingskommunikasiebeleid?", o: ["Verkoopspromosies, advertering, publisiteit, persoonlike verkope", "Produk, prys, plek, promosie", "Massa, lot, stuk, diens", "Werwing, seleksie, induksie, plasing"], why: "Onthou: VAPP." },
+  { t: 6, q: "Wat is 'n doel van verkoopspromosies?", o: ["Verhoog die aantal produkte wat aan kliënte verkoop word", "Verhoog produksiekoste", "Verminder kliënte", "Verhoog belasting"], why: "Ook: inligting oor produkte en langdurige verhoudings met kliënte." },
+  { t: 6, q: "Prys is die maklikste markveranderlike om te beïnvloed, maar...", o: ["Dit is een van die mees ingewikkeldste besluite", "Dit maak geen verskil nie", "Net die regering bepaal dit", "Dit sluit nooit BTW in nie"], why: "Die prys moet koste dek, bekostigbaar wees en wins maak." },
+
+  { t: 7, q: "Massaproduksie staan ook bekend as...", o: ["Vloeiproduksie of ononderbroke produksie", "Lotproduksie", "Stukproduksie", "Onderbroke produksie"], why: "Lot- en stukproduksie is onderbroke produksiestelsels." },
+  { t: 7, q: "Watter is 'n voorbeeld van massaproduksie?", o: ["Gebottelde water en potlode", "Trourokke", "Uniforms vir spanne", "Unieke olieverfskilderye"], why: "Groot hoeveelhede gestandaardiseerde produkte teen 'n konstante tempo." },
+  { t: 7, q: "'n Voordeel van massaproduksie is...", o: ["Die eenheidskoste is goedkoper", "Dit is baie aanpasbaar", "Lae opstellingskoste", "Werkers raak nooit verveeld"], why: "Die proses is vinniger en die finale prys kan verlaag word." },
+  { t: 7, q: "'n Nadeel van massaproduksie is...", o: ["Opstellingskoste is duur weens gespesialiseerde masjinerie", "Produkte is uniek", "Eenheidskoste is hoog", "Dit is te stadig"], why: "Dit is ook nie aanpasbaar vir unieke produkte nie." },
+  { t: 7, q: "By lotproduksie...", o: ["Gaan produkte in bondels deur die proses", "Is elke produk uniek", "Is produksie ononderbroke", "Word net een item gemaak"], why: "Voorbeelde: koeke in 'n bakkery, uniforms vir sportspanne, strooibiljette." },
+  { t: 7, q: "'n Voordeel van lotproduksie is...", o: ["Opstellingskoste is laer as by massaproduksie", "Produkte is altyd identies", "Geen opberging nodig", "Geen wagtyd nie"], why: "Ook: hoeveelhede kan beheer word wat vermorsing verminder." },
+  { t: 7, q: "'n Nadeel van lotproduksie is...", o: ["Tyd word verspil omdat daar gewag word om 'n bondel te voltooi", "Dit is glad nie aanpasbaar", "Elke item is uniek", "Werkers is altyd verveeld weens unieke take"], why: "Gehalte is ook nie altyd maklik om te beheer nie." },
+  { t: 7, q: "Trourokke en pasgemaakte seilbote is voorbeelde van...", o: ["Stukproduksie", "Massaproduksie", "Lotproduksie", "Vloeiproduksie"], why: "Elke taak is uniek en vereis gespesialiseerde werkers." },
+  { t: 7, q: "'n Voordeel van stukproduksie is...", o: ["Werknemers raak nie verveeld nie, aangesien elke taak uniek is", "Lae koste per item", "Grondstowwe word grootmaat gekoop", "Die proses is baie vinnig"], why: "Die besigheid kan ook hoër pryse vra." },
+
+  { t: 8, q: "Werwing is...", o: ["Die proses om 'n vakante posisie te identifiseer en geskikte kandidate te trek", "Die keuse van die beste kandidaat", "Om nuwe werkers welkom te heet", "Om salarisse te bepaal"], why: "Die keuse van die beste kandidaat = seleksie." },
+  { t: 8, q: "Taakanalise bestaan uit...", o: ["Taakbeskrywing en taakspesifikasie", "Werwing en seleksie", "Induksie en plasing", "Stukwerk en tydverwant"], why: "Wenk: ken die verskil tussen taakbeskrywing en taakspesifikasie!" },
+  { t: 8, q: "Wat beskryf 'n TAAKBESKRYWING?", o: ["Die pligte en verantwoordelikhede van die posisie", "Die persoonlike eienskappe en kwalifikasies benodig", "Die salaris", "Die induksieprogram"], why: "Taakspesifikasie = vaardighede, kwalifikasies en ervaring nodig." },
+  { t: 8, q: "Wat beskryf 'n TAAKSPESIFIKASIE?", o: ["Die vereiste vaardighede, kwalifikasies en ervaring", "Die titel en pligte van die pos", "Die werksvoorwaardes", "Die organisasiestruktuur"], why: "Bv. ook ongewone werksversoeke soos om oor Kersfees te werk." },
+  { t: 8, q: "Watter een is 'n bron van INTERNE werwing?", o: ["Besigheid se nuusbrief/omsendbriewe", "Werwingsagentskappe", "Koerante", "Professionele assosiasies"], why: "Interne: e-posse, intranet, mond-tot-mond, kennisgewingborde, huidige werknemers se aanbevelings." },
+  { t: 8, q: "Watter een is 'n bron van EKSTERNE werwing?", o: ["Werwingsagentskappe", "Interne bulletins", "Intranet", "Kennisgewingborde in die besigheid"], why: "Eksterne: gedrukte/elektroniese/sosiale media, opleidingsinstellings, plakkate." },
+  { t: 8, q: "Wat is induksie?", o: ["Nuwe werknemers word bekend gestel aan hul werksomgewing, kultuur, produkte en prosesse", "Die keuse van kandidate", "Om werkers af te dank", "'n Salarismetode"], why: "Doel: werknemers inskakel, stres verminder en so gou moontlik produktief." },
+  { t: 8, q: "Wat is plasing?", o: ["Die suksesvolle kandidaat word in die posisie geplaas waar hy/sy die effektiefste sal wees", "Werwing deur advertensies", "Die onderhoud", "Om salarisse te betaal"], why: "Die werkgewer kan psigometriese toetsing gebruik om sterkpunte te bepaal." },
+  { t: 8, q: "Geld betaal volgens die aantal items vervaardig, is...", o: ["Stukwerk vergoeding", "Tydverwante vergoeding", "Bruto salaris", "Bonus"], why: "Tydverwant = betaal volgens tyd wat aan die werk spandeer is." },
+  { t: 8, q: "Volgens die WBDV mag werknemers in 'n 5-dag werksweek hoeveel ure per dag werk?", o: ["9 ure", "8 ure", "10 ure", "12 ure"], why: "8 ure per dag in 'n 6-dag werksweek; nie meer as 10 ure oortyd per week nie." },
+  { t: 8, q: "Volgens die WBDV kry werknemers 'n breek van 60 minute nadat hulle ... gewerk het.", o: ["5 ure", "3 ure", "8 ure", "4 ure"], why: "Ook: 6 weke betaalde siekverlof in 'n siklus van 36 maande." },
+  { t: 8, q: "Volgens die WBDV mag die besigheid nie kinders onder die ouderdom van ... in diens neem nie.", o: ["16 jaar", "18 jaar", "14 jaar", "21 jaar"], why: "Werknemers kry dubbele betaling op publieke vakansiedae of Sondae." },
+  { t: 8, q: "Implikasie van die WAV: voordat werknemers ontslaan word, moet MHB...", o: ["Die regte prosedures volg soos deur die KVBA en Arbeidshof voorgeskryf", "Net 'n e-pos stuur", "Die vakbond ignoreer", "Niks doen nie"], why: "Werkers moet ook toegelaat word om werkplekforums te stig." },
+  { t: 8, q: "Netto salaris is...", o: ["Die geld wat die werknemer huis toe neem nadat alle aftrekkings gemaak is", "Salaris voor aftrekkings", "Geld per item", "Oortydbetaling"], why: "Bruto salaris = voor enige aftrekkings." },
+];
+
+const REG = ["Goed so, STAY! 🖤❤️", "Jy is op vuur! 🔥", "Hoofrol-energie! ⭐", "Perfek gedans, STAY! 💃", "Daai antwoord is 'n treffer! 🎶", "Ons STAY is slim! 🧠✨", "Ja-ja-ja! Reg! 🐺"];
+const VER = ["Geen stres, STAY, probeer weer! 💪", "Byna! Lees die verduideliking 👀", "Elke trainee oefen eers 🎧", "Jy kry dit volgende keer! 🖤"];
+
+
+
+const shuf=a=>{const b=a.slice();for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const ld=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const stars=()=>ld('bs11Stars',{}),best=()=>ld('bs11Best',{}),foute=()=>ld('bs11Foute',[]);
+const addFout=i=>{const f=foute();if(!f.includes(i)){f.push(i);sv('bs11Foute',f)}};
+const delFout=i=>sv('bs11Foute',foute().filter(x=>x!==i));
+const vib=m=>{try{navigator.vibrate&&navigator.vibrate(m)}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const LV=TOPICS.map((t,i)=>({n:t.naam,ic:t.em,sub:t.sub,t:i})).concat([{n:"Finale: Eksamen-oefening",ic:"🏆",sub:"25 gemengde vrae",test:true}]);
+const unlocked=i=>i===0||(stars()[i-1]||0)>0;
+const app=document.getElementById('app');let S={},CF=0;
+function guide(t,m){return `<div class="masc ${m||''}" id="masc"><div class="av">🐺</div><div class="bub">${t}</div></div>`}
+function mood(m,t){const e=document.getElementById('masc');if(e)e.outerHTML=guide(t,m)}
+function home(){stopCf();const st=stars(),f=foute().length,b=best();let cur0=false;
+const total=Object.values(st).reduce((a,x)=>a+x,0);
+let nodes=LV.map((l,i)=>{const u=unlocked(i),s=st[i]||0,cur=u&&!s&&!cur0;if(cur)cur0=true;
+return `<button class="lv ${u?'':'lk'} ${cur?'cur':''} ${s?'done':''}" onclick="${u?`startLevel(${i})`:`mood('sad','Voltooi eers die vorige album 🔒')`}">
+<span class="ic">${u?l.ic:'🔒'}</span><span class="lt"><span class="ln">${i+1}. ${esc(l.n)}</span><span class="ls">${esc(l.sub)}</span></span>
+<span class="st">${[1,2,3].map(k=>k<=s?'★':'☆').join('')}</span></button>`}).join('<div class="ln2"></div>');
+app.innerHTML=`<header class="hero"><div class="k1">STAY · STUDIE-MODUS</div><h1>Besigheidstudies <span>Gr 11</span></h1><div class="k3">Novembereksamen 2026 · Kayla</div></header>
+<div class="card">${guide(f?`Hey STAY 🖤 Jy het ${f} foute in jou bank. Kom ons maak hulle reg.`:'Hey STAY 🖤 Werk album vir album deur. Elke ster bring jou nader aan die eksamen.')}</div>
+<div class="card"><div class="row"><span class="sil">Sterre: <b>${total}</b> / ${LV.length*3}</span><span class="sil">Albums: <b>${Object.keys(st).filter(k=>st[k]>0).length}</b> / ${LV.length}</span></div><div class="bar"><div class="fill" style="width:${total/(LV.length*3)*100}%"></div></div></div>
+<h2 class="sec">💿 Albums</h2><div class="path">${nodes}</div>
+<h2 class="sec">🎧 Vrye oefening</h2>
+<button class="big" ${f?'':'disabled'} onclick="startFoute()">🧐 My foute (${f})</button>
+<div class="sel"><select id="ts">${TOPICS.map((t,i)=>`<option value="${i}">${t.em} ${esc(t.naam)}${b[i]!==undefined?` · beste ${b[i]}%`:''}</option>`).join('')}</select><button class="sec2" onclick="startFree(+document.getElementById('ts').value,'o')">Oefenmodus ▶</button></div>
+<button class="sec2 full" onclick="startFree('X','t')">📝 Toetsmodus: alles gemeng (25)${b.X!==undefined?` · beste ${b.X}%`:''}</button>
+<p class="dof xs">Oefenmodus: probeer tot jy reg is, met verduideliking. Toetsmodus: geen hulp, punte aan die einde.</p>
+<button class="lnk" onclick="reset()">↺ Herstel vordering</button>
+<p class="dof xs c">${QS.length} vrae uit jou handboek (gemerkte afdelings)</p>`}
+function reset(){if(confirm('Vee alle sterre, punte en foute uit?')){['bs11Stars','bs11Best','bs11Foute'].forEach(k=>localStorage.removeItem(k));home()}}
+const qi=ids=>ids.map(i=>({i}));
+function begin(o){S=Object.assign({i:0,sc:0,st:0,max:0,wrong:[]},o);window.scrollTo(0,0);show()}
+function startLevel(li){const l=LV[li];if(!unlocked(li))return;begin(l.test?{mode:'lvl',lv:li,t:'X',m:'t',items:qi(shuf(QS.map((_,i)=>i)).slice(0,25))}:{mode:'lvl',lv:li,t:l.t,m:'o',items:qi(shuf(QS.map((q,i)=>q.t===l.t?i:-1).filter(i=>i>=0)))})}
+function startFree(t,m){const all=QS.map((_,i)=>i);begin({mode:'free',t,m,items:qi(t==='X'?shuf(all).slice(0,25):shuf(all.filter(i=>QS[i].t===t)))})}
+function startFoute(){const f=foute();if(f.length)begin({mode:'foute',t:'F',m:'o',items:qi(shuf(f))})}
+function hdr(){const n=S.items.length,ttl=S.mode==='lvl'?LV[S.lv].n:S.mode==='foute'?'My foute':S.t==='X'?'Toetsmodus':TOPICS[S.t].naam;
+return `<div class="top"><button class="x" onclick="home()">✕</button><span class="tt">${esc(ttl)} · ${S.i+1}/${n}</span><span><span class="fl">🔥</span>${S.st} · ★ <span id="scv">${S.sc}</span></span></div><div class="bar"><div class="fill" style="width:${S.i/n*100}%"></div></div>`}
+function show(){S.tried=false;const q=QS[S.items[S.i].i];S.cur=shuf(q.o.map((x,k)=>[x,k===0]));
+app.innerHTML=hdr()+`<div class="card">${guide(S.m==='t'?'Fokus. Jy het dit. ✨':'Lees mooi... 🤔')}<span class="tag">${TOPICS[q.t].em} ${esc(TOPICS[q.t].naam)}</span>
+<div class="q">${esc(q.q)}</div>${S.cur.map((o,k)=>`<button class="op" id="b${k}" onclick="ans(${k})"><b>${'ABCD'[k]}</b>${esc(o[0])}</button>`).join('')}<div class="fb" id="fb"></div><div id="nx"></div></div>`}
+function hit(){S.sc++;S.st++;S.max=Math.max(S.max,S.st);vib(25);burst();const e=document.getElementById('scv');if(e){e.textContent=S.sc;e.classList.remove('tick');void e.offsetWidth;e.classList.add('tick')}}
+function ans(k){const it=S.items[S.i],q=QS[it.i],b=document.getElementById('b'+k),fb=document.getElementById('fb');if(b.disabled)return;const right=S.cur[k][1];
+if(!right&&!S.tried){addFout(it.i);S.wrong.push(it.i)}
+if(S.m==='o'){if(right){b.classList.add('ok');if(!S.tried){hit();if(S.mode==='foute')delFout(it.i)}const g=pick(REG);mood('happy',g);fb.innerHTML=`<b>${g}</b>`+(S.st>=3?` <span class="fl">🔥 ${S.st} op 'n ry!</span>`:'')+`<div class="ex">💡 ${esc(q.why)}</div>`;lock();next()}
+else{b.classList.add('bad');b.disabled=true;vib([40,40,40]);S.tried=true;S.st=0;const m=pick(VER);mood('sad',m);fb.textContent=m}}
+else{if(right)hit();else S.st=0;setTimeout(adv,right?350:0)}}
+function lock(){document.querySelectorAll('button.op').forEach(x=>x.disabled=true)}
+function next(){document.getElementById('nx').innerHTML=`<button class="big" onclick="adv()">Volgende ➜</button>`;document.getElementById('nx').scrollIntoView({behavior:'smooth',block:'nearest'})}
+function adv(){S.i++;window.scrollTo(0,0);S.i<S.items.length?show():end()}
+function end(){const n=S.items.length,p=Math.round(S.sc/n*100);let extra='',nb=false;
+if(S.mode!=='foute'){const b=best(),key=S.mode==='lvl'?(LV[S.lv].test?'X':S.t):S.t;if(p>(b[key]??-1)){b[key]=p;sv('bs11Best',b);nb=true}}
+let s=0;if(S.mode==='lvl'){s=p===100?3:p>=80?2:p>=50?1:0;const st=stars();if(s>(st[S.lv]||0)){st[S.lv]=s;sv('bs11Stars',st)}
+extra=`<div class="big3">${[1,2,3].map(k=>`<span style="animation-delay:${.4+k*.3}s">${k<=s?'★':'☆'}</span>`).join('')}</div>`+(s?(S.lv+1<LV.length?`<p>🔓 Volgende album oop: <b>${esc(LV[S.lv+1].n)}</b></p><button class="big" onclick="startLevel(${S.lv+1})">Volgende album ➜</button>`:'<p>🏆 Al die albums voltooi. Wêreldtoer-status!</p>'):'<p>Kry minstens 50% om die volgende album oop te sluit.</p>')}
+if(S.mode==='foute')extra=`<p>Foute oor in jou bank: ${foute().length}</p>`;
+const bd=[];if(p>=80)bd.push('💿 Album-ster');if(p===100)bd.push('🌍 Wêreldtoer (100%)');if(S.max>=5)bd.push(`🔥 Vuurstreep (${S.max} op 'n ry)`);if(nb)bd.push('📈 Nuwe persoonlike beste');
+const msg=p>=90?"Ongelooflik, STAY. Eksamen-gereed. 🖤":p>=70?"Goed so, STAY! Nog 'n bietjie skaaf. ❤️":p>=50?"Op koers. Hersien jou foute en probeer weer.":"Elke trainee begin hier. Gaan deur die verduidelikings en probeer weer. 💪";
+const wr=[...new Set(S.wrong)];
+app.innerHTML=`<div class="card c res">${guide(msg,p>=50?'happy':'sad')}<h2 class="pc">${p}%</h2><div class="sil">${S.sc} / ${n} reg</div>${extra}${bd.length?`<div class="bds">${bd.map(x=>`<span class="bd">${x}</span>`).join('')}</div>`:''}</div>
+${wr.length?`<div class="card"><b>📝 Hersien</b>${wr.map(i=>`<div class="fout"><div>${esc(QS[i].q)}</div><div class="grn">✔ ${esc(QS[i].o[0])}</div><div class="dof">${esc(QS[i].why)}</div></div>`).join('')}</div>`:''}
+<div class="row c">${wr.length?`<button class="sec2" onclick="begin({mode:'foute',t:'F',m:'o',items:qi(shuf([${wr}]))})">🔁 Herprobeer foute (${wr.length})</button>`:''}
+<button class="sec2" onclick="${S.mode==='lvl'?`startLevel(${S.lv})`:S.mode==='foute'?'startFoute()':`startFree(${JSON.stringify(S.t).replace(/"/g,"'")},'${S.m}')`}">Probeer weer 🔁</button><button class="sec2" onclick="home()">Tuis 🏠</button></div>`;
+window.scrollTo(0,0);if(p>=70)confetti()}
+function burst(){const f=document.getElementById('fb');if(!f)return;const w=document.createElement('div');w.className='burst';w.innerHTML=['❤️','🖤','✦','🐺','✨','❤️','✦'].map((e,i)=>`<span style="left:${8+i*13}%;animation-delay:${i*.06}s">${e}</span>`).join('');f.parentNode.appendChild(w);setTimeout(()=>w.remove(),1400)}
+function stopCf(){cancelAnimationFrame(CF);const c=document.getElementById('cf');c.getContext('2d').clearRect(0,0,c.width,c.height)}
+function confetti(){stopCf();const c=document.getElementById('cf'),x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;const col=['#e5162b','#c9ccd4','#ffffff','#ff4d5e','#8a8d96'];
+let P=Array.from({length:140},()=>({x:Math.random()*c.width,y:-Math.random()*c.height,r:3+Math.random()*5,v:2+Math.random()*3,s:Math.random()*6,c:pick(col)})),t=0;
+(function f(){x.clearRect(0,0,c.width,c.height);P.forEach(p=>{p.y+=p.v;p.x+=Math.sin(t/20+p.s);x.fillStyle=p.c;x.fillRect(p.x,p.y,p.r,p.r*1.6)});if(++t<240)CF=requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height)})()}
+home();
+
+new MutationObserver(()=>{app.classList.remove('in');void app.offsetWidth;app.classList.add('in')}).observe(app,{childList:true});
+</script></body></html>
